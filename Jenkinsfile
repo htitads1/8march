@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git 'https://your-repo-url.git'
+                git 'https://github.com/htitads1/8march.git'
             }
         }
 
