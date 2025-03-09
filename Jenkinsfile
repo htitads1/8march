@@ -30,7 +30,7 @@ pipeline {
             steps {
                 bat """
                 for /f \"tokens=5\" %%a in ('netstat -ano ^| findstr :%STREAMLIT_PORT%') do taskkill /F /PID %%a || echo No process found
-                start /B %VENV_DIR%\\Scripts\\python -m streamlit run app.py --server.port=%STREAMLIT_PORT% --server.headless=true
+                start /B %VENV_DIR%\\Scripts\\python -m streamlit run st_app.py --server.port=%STREAMLIT_PORT% --server.headless=true
                 """
             }
         }
